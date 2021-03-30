@@ -5,6 +5,7 @@
       "nome": "Pastel de frango",
       "descricao": "Massa refinada e frango",
       "preco": 5.5,
+      "estoque": 5,
       "categoria_id": 1
     },
     {
@@ -12,6 +13,7 @@
       "nome": "Pastel de calabresa",
       "descricao": "Massa refinada e calabresa",
       "preco": 5.5,
+      "estoque": 5,
       "categoria_id": 1
     },
     {
@@ -19,6 +21,7 @@
       "nome": "Pastel de Pizza",
       "descricao": "Massa refinada, orégano, tomate e queijo",
       "preco": 5.5,
+      "estoque": 5,
       "categoria_id": 1
     },
     {
@@ -26,6 +29,7 @@
       "nome": "Pastel de queijo",
       "descricao": "Massa e queijo mussarella",
       "preco": 5.75,
+      "estoque": 5,
       "categoria_id": 1
     },
     {
@@ -33,6 +37,7 @@
       "nome": "Coca cola 350ml",
       "descricao": "",
       "preco": 5.5,
+      "estoque": 5,
       "categoria_id": 2
     },
     {
@@ -40,6 +45,7 @@
       "nome": "Caldi cana GELAAAADO",
       "descricao": "Extraido da melhor cana de Tatuí",
       "preco": 10.5,
+      "estoque": 5,
       "categoria_id": 2
     },
     {
@@ -47,6 +53,7 @@
       "nome": "Pinga 51",
       "descricao": "A marvada",
       "preco": 10.5,
+      "estoque": 5,
       "categoria_id": 2
     },
     {
@@ -54,6 +61,7 @@
       "nome": "Coca cola 600ml",
       "descricao": "",
       "preco": 7.5,
+      "estoque": 5,
       "categoria_id": 2
     }
   ],

@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="gog__header">
+    <mat-toolbar-row class="gog_mat_toolbar">
+        <span>
+            <img class="gog_logo_" src="..//..//assets/logo.png">
+        </span>
+        <span class="example-spacer"></span>
+        <span (click)="cartClicked()">
+            <img src="..//..//assets/ico_cart.png">
+            <span class="gog_cartValue">{{sampleData.length}}</span>
+        </span>
+    </mat-toolbar-row>
+</mat-toolbar>
+<app-cart-dialog *ngIf="cartBoolean"></app-cart-dialog>

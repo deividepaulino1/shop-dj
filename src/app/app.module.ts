@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIcon, MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +22,9 @@ import { FormaDePagamentoComponent } from './checkout/forma-de-pagamento/forma-d
 import { StatusPedidoComponent } from './checkout/status-pedido/status-pedido.component';
 import { AuthService } from './autenticacao/login/auth.service';
 import { FormsModule } from '@angular/forms';
+import { ContentComponent } from './shared/card/carrinho/content/content.component';
+import { CartHeaderComponent } from './shared/card/carrinho/cart-header/cart-header.component';
+import { CartDialogComponent } from './shared/card/carrinho/cart-dialog/cart-dialog.component';
 
 
 @NgModule({
@@ -35,6 +41,10 @@ import { FormsModule } from '@angular/forms';
     RevisaoComponent,
     FormaDePagamentoComponent,
     StatusPedidoComponent,
+    ContentComponent,
+    CartHeaderComponent,
+    CartDialogComponent
+    
     
   ],
   imports: [
@@ -42,7 +52,10 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule
 
   ],
   providers: [AuthService],

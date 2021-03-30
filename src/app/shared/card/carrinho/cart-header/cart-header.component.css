@@ -1,0 +1,24 @@
+.gog_logo_{
+    width: 36px;
+    margin-top: 9px;
+}
+.gog_mat_toolbar > span:hover{
+cursor: pointer;
+}
+.gog_mat_toolbar > span:last-child{
+    margin-left: auto;
+}
+.gog_mat_toolbar > span:last-child img{
+    width: 20px;
+}
+.gog_cartValue{
+    font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  margin-left: 5px;
+  color: #404040;    
+}

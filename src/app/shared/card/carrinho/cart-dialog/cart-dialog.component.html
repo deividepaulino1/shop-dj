@@ -1,0 +1,25 @@
+<div class="items_cart_dialog_parent">
+    <div class="itmes_cart">
+        <div>
+            <span>{{sampleData.length}} {{sampleData.length > 1 ? 'Itens' : 'Item'}} no seu carrinho</span>
+        </div>
+        <div>
+            <span></span>
+        </div>
+        <div>
+            <button  mat-button (click)="clearCart()" class="rounded_Rectangle_7">Limpar carrinho</button>
+        </div>
+    </div>
+    <div *ngIf="sampleData.length > 0">
+        <div class="gog_cart_items_holder" *ngFor="let data of sampleData">
+            <img src="..//..//assets/{{data.imgUrl}}">
+            <div>
+                <p>{{data.name}}</p>
+                <span (click)="removeData(data)">Remover do carrinho</span>
+            </div>
+            <div>
+                <span>{{data.price | currency}}</span>
+            </div>
+        </div>
+    </div>
+</div>
