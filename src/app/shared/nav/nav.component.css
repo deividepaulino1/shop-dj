@@ -1,0 +1,32 @@
+li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+
+
+.menu { 
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  max-width: 15%;
+  border: 1px solid red;
+  margin-right: 10%;
+}
+
+#menu__lista {
+  margin-left: 2%;
+  border: 1px solid red;
+  font-size: 30px;
+  margin-top: 10%;
+}
+
+p {
+  font-size: 10px;
+  border: 1px solid red;
+  margin: 1px;
+  text-align: left;
+}

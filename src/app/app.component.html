@@ -1,0 +1,71 @@
+<app-nav></app-nav>
+<app-footer></app-footer>
+
+<!-- <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item active" aria-current="page">Gerenciamento de produtos</li>
+    </ol>
+  </nav>
+  <div class="container">
+    <div class="card list-car">
+      <h5 class="card-header">Lista de produtos</h5>
+      <div class="card-body">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Sabor</th>
+                <th scope="col">Descricao</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Ações</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let produto of produtos">
+                <td>{{produto.id}}</td>
+                <td>{{produto.nome}}</td>
+                <td>{{produto.descricao}}</td>
+                <td>{{produto.preco | currency}}</td>
+                <td>
+                  <button type="button" class="btn btn-warning btn-sm" (click)="editProduto(produto)">Editar</button>
+                  <button type="button" class="btn btn-danger btn-sm ml-1" (click)="deleteProduto(produto)">Deletar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+    <div class="card add-produto">
+        <h5 class="card-header">Adicionar/Atualizar Produto</h5>
+        <div class="card-body">
+            <form id="add-form" (ngSubmit)="f.form.valid && saveProduto(f)" #f="ngForm" novalidate>
+
+              <div class="form-group">
+                  <label for="nome">Sabor</label>
+                  <input type="text" [(ngModel)]="produto.nome" id="nome" name="nome" #nome="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && nome.invalid }" placeholder="Digite a cor">
+                  <div *ngIf="f.submitted && nome.invalid" class="invalid-feedback">
+              
+                  </div>
+                  <div class="form-group">
+                    <label for="descricao">Descricao</label>
+                    <input type="text" [(ngModel)]="produto.descricao" id="descricao" name="descricao" #descricao="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && descricao.invalid }" placeholder="Digite o modelo">
+                    <div *ngIf="f.submitted && descricao.invalid" class="invalid-feedback">
+            
+                    </div>
+                </div>
+              </div>
+              <div class="form-group">
+                  <label for="preco">Preço</label>
+                  <input type="number" [(ngModel)]="produto.preco" id="preco" name="preco" #preco="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && preco.invalid }" placeholder="Digite o preço">
+                  <div *ngIf="f.submitted && preco.invalid" class="invalid-feedback">
+
+                  </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-add-car">Salvar</button>
+              <button type="reset" class="btn btn-secondary btn-add-car" (click)="cleanForm(f)">Cancelar</button>
+            </form>
+        </div>
+      </div>
+  </div>
+
+-->

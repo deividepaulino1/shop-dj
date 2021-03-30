@@ -1,0 +1,100 @@
+{
+  "produto": [
+    {
+      "id": 1,
+      "nome": "Pastel de frango",
+      "descricao": "Massa refinada e frango",
+      "preco": 5.5,
+      "categoria_id": 1
+    },
+    {
+      "id": 2,
+      "nome": "Pastel de calabresa",
+      "descricao": "Massa refinada e calabresa",
+      "preco": 5.5,
+      "categoria_id": 1
+    },
+    {
+      "id": 3,
+      "nome": "Pastel de Pizza",
+      "descricao": "Massa refinada, orégano, tomate e queijo",
+      "preco": 5.5,
+      "categoria_id": 1
+    },
+    {
+      "id": 4,
+      "nome": "Pastel de queijo",
+      "descricao": "Massa e queijo mussarella",
+      "preco": 5.75,
+      "categoria_id": 1
+    },
+    {
+      "id": 5,
+      "nome": "Coca cola 350ml",
+      "descricao": "",
+      "preco": 5.5,
+      "categoria_id": 2
+    },
+    {
+      "id": 6,
+      "nome": "Caldi cana GELAAAADO",
+      "descricao": "Extraido da melhor cana de Tatuí",
+      "preco": 10.5,
+      "categoria_id": 2
+    },
+    {
+      "id": 7,
+      "nome": "Pinga 51",
+      "descricao": "A marvada",
+      "preco": 10.5,
+      "categoria_id": 2
+    },
+    {
+      "id": 8,
+      "nome": "Coca cola 600ml",
+      "descricao": "",
+      "preco": 7.5,
+      "categoria_id": 2
+    }
+  ],
+  "usuario": [
+    {
+      "id": 1,
+      "nome": "Deivide",
+      "sobrenome": "Paulino",
+      "cpf": 45139475863,
+      "telefone": 15988341654,
+      "cep": 18276010,
+      "endereco": "Rua 15 de novembro",
+      "numero": 1663,
+      "observacao": "perto do caetano",
+      "categoria_id": 3
+    },
+    {
+      "id": 2,
+      "nome": "Lucas",
+      "sobrenome": "Melo",
+      "cpf": 44588562860,
+      "telefone": 15996604699,
+      "cep": 18276001,
+      "endereco": "Rua 11 de agosto",
+      "numero": 682,
+      "observacao": "em frente a allegro",
+      "categoria_id": 3
+    }
+  ],
+  "categoria": [
+    {
+      "id": 1,
+      "nome": "Pasteis"
+    },
+    {
+      "id": 2,
+      "nome": "Bebidas"
+    },
+    {
+      "id": 3,
+      "nome": "Usuarios"
+    }
+  ]
+}
