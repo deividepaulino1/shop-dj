@@ -5,16 +5,16 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class SharedServiceService {
-  tempData: any = [] ;
-  private sampleData = new BehaviorSubject<any[]>([]);
+  public tempData: any = [] ;
+  public sampleData = new BehaviorSubject<any[]>([]);
   sampleData$ = this.sampleData.asObservable();
   constructor() { }
 
   // to push new values
-  // tslint:disable-next-line:typedef
+  
   setItemData(data) {
     if (this.tempData.some(obj => obj.name === data.name)) {
-      alert('Item is already in the cart.');
+      alert('Produto já esta no carrinho');
     } else {
       this.tempData.push(data);
       this.sampleData.next(this.tempData);
@@ -22,12 +22,12 @@ export class SharedServiceService {
   }
 
   // to get Values
-  // tslint:disable-next-line:typedef
+ 
   getItemData() {
     return this.sampleData$;
   }
 
-  // tslint:disable-next-line:typedef
+ 
   deleteItemData(data) {
     this.tempData = this.tempData.filter(element => {
       if (element.name === data.name) {
@@ -37,7 +37,7 @@ export class SharedServiceService {
     });
     this.sampleData.next(this.tempData);
   }
-  // tslint:disable-next-line:typedef
+ 
   clearData() {
     this.tempData.forEach(element => {
       element.status = '';

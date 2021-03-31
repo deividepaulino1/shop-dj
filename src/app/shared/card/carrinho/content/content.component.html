@@ -2,16 +2,15 @@
     <img src="..//..//assets/bg.png">
     <div class="gog_cards_wrapper">
         <div class="gog_cards" *ngFor="let data of sampleData">
-            <img src="..//..//assets/{{data.imgUrl}}">
+            <img src="..">
             <div class="gog_cards_details">
                 <p>
                     {{data.name}}
                 </p>
                 <!-- //currency pipe -->
                 <div>
-                    <span
-                        (click)="addItems(data)">{{data.status === 'No carrinho'? data.status:(data.price | currency)}}</span>
-                    
+                    <span (click)="addItems(data)">{{data.status === 'Adicionado'? data.status:(data.price | currency)}}</span>
+
                 </div>
             </div>
         </div>

@@ -1,37 +1,39 @@
-
-.gog_content_body{
+.gog_content_body {
     padding: 0 100px !important;
 }
-.gog_home_game_content > img{
+
+.gog_home_game_content>img {
     width: 100%;
     max-height: 500px;
-    min-height: 370px
-
+    min-height: 371px
 }
-.gog_cards_details{
 
-}
-.gog_cards_wrapper{
+.gog_cards_details {}
+
+.gog_cards_wrapper {
     display: flex;
-    margin:  20px 0px;    
+    margin: 20px 0px;
     justify-content: space-around;
 }
-.gog_cards{
+
+.gog_cards {
     width: 18%;
-    display: flex;    
+    display: flex;
     position: relative;
     flex-direction: column;
     min-height: 250px;
     background-color: #dedede;
     box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.15);
 }
-.gog_cards_details > div{
+
+.gog_cards_details>div {
     position: absolute;
     bottom: 10px;
     right: 5px;
     text-align: right;
 }
-.gog_cards_details > div > span{
+
+.gog_cards_details>div>span {
     font-size: 13px;
     font-weight: 600;
     font-stretch: normal;
@@ -45,20 +47,23 @@
     padding: 2px 8px;
     margin: 0px 5px;
     border-radius: 5px;
-  float: right;
-cursor: pointer;
+    float: right;
+    cursor: pointer;
 }
-.gog_cards_details > div > span:hover{
+
+.gog_cards_details>div>span:hover {
     color: #ffffff;
     background-color: #0a0090;
     border: solid 1px rgba(255, 255, 255, 0.25);
 }
-.gog_cards_details{
+
+.gog_cards_details {
     padding: 10px;
 }
-.gog_cards_details > p{
+
+.gog_cards_details>p {
     margin-top: 0px;
-     font-size: 14px;
+    font-size: 14px;
     font-weight: 600;
     font-stretch: normal;
     font-style: normal;
@@ -68,6 +73,7 @@ cursor: pointer;
     color: #212121;
     text-transform: uppercase;
 }
-.gog_cards > img{
-width: 100%;
+
+.gog_cards>img {
+    width: 100%;
 }

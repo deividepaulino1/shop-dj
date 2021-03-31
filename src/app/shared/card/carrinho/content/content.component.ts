@@ -6,10 +6,11 @@ import { SharedServiceService } from 'src/app/shared-service.service';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
-  protected sampleData = [{
+  public sampleData = [{
     name: 'Produto 01',
     imgUrl: 'card1.png',
     price: 9.99,
+    status: 'false',
   },
   {
     name: 'Produto 02',
@@ -31,14 +32,15 @@ export class ContentComponent implements OnInit {
     imgUrl: 'card5.png',
     price: 4.99,
   }];
-  constructor(private sharedSerivce: SharedServiceService) { }
+  constructor(public sharedSerivce: SharedServiceService) { }
 
-  // tslint:disable-next-line:typedef
+
   ngOnInit() {
   }
-  // tslint:disable-next-line:typedef
+ 
   addItems(data) {
-    data.status = 'No carrinho'; // appending a new key status
+    
     this.sharedSerivce.setItemData(data);
+    data.status = 'Adicionado'; 
   }
 }
