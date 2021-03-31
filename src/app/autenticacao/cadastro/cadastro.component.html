@@ -1,22 +1,77 @@
 <router-outlet></router-outlet>
 
-<div class="container">
+<!--<div #frm="ngForm" (ngSubmit="criar(frm)" class="container">
     <label>Nome </label>
-    <input type="text" placeholder="Nome">
+    <input [(ngModel)]="contato.nome" type="text" placeholder="Nome" required>
     <label>Sobrenome </label>
     <input type="text" placeholder="Sobrenome">
     <label>CPF </label>
     <input type="text" placeholder="CPF">
     <label>Telefone </label>
-    <input type="text" placeholder="Telefone">
+    <input [(ngModel)]="contato.email" type="text" placeholder="Email" required email>
     <label>CEP </label>
     <input type="text" placeholder="CEP">
     <label>Endereço </label>
     <input type="text" placeholder="Endereço">
-    <label >Número </label>
+    <label>Número </label>
     <input type="text" placeholder="texto">
     <label>Observação </label>
-    <input  placeholder="Observação"type="text">
-    <button type="button">Fazer Login</button>
+    <input placeholder="Observação" type="text">
+    <button [disabled]="frm.invalid" type="button">Fazer Login</button>
     <div class="container__cadastro" routerLink='../cadastro'>Não tem uma conta? Cadastre-se aqui</div>
 </div>
+!-->
+
+<app-nav></app-nav>
+<app-footer></app-footer>
+<div>
+
+    <div>
+        <table>
+            <thead>
+                <tr *ngFor="let usuario of usuarios">
+                    <td>{{usuario.id}}</td>
+                    <td>{{usuario.nome}}</td>
+                    <td>{{usuario.sobrenome}}</td>
+                    <td>{{usuario.cpf}}</td>
+                    <button type="button" class="btn btn-warning btn-sm" (click)="editUsuario(usuario)">Editar</button>
+                    <button type="button" class="btn btn-danger btn-sm ml-1" (click)="deleteUsuario(usuario)">Deletar</button>
+                </tr>
+            </thead>
+
+        </table>
+    </div>
+</div>
+<div class="card add-produto">
+    <h5 class="card-header">Adicionar/Atualizar Produto</h5>
+    <div class="card-body">
+        <form id="add-form" (ngSubmit)="f.form.valid && saveUsuario(f)" #f="ngForm" novalidate>
+
+            <div class="form-group">
+                <label for="nome">Sabor</label>
+                <input type="text" [(ngModel)]="usuario.nome" id="nome" name="nome" #nome="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && nome.invalid }" placeholder="Digite a cor">
+                <div *ngIf="f.submitted && nome.invalid" class="invalid-feedback">
+
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descricao</label>
+                    <input type="text" [(ngModel)]="usuario.sobrenome" id="descricao" name="descricao" #descricao="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && descricao.invalid }" placeholder="Digite o modelo">
+                    <div *ngIf="f.submitted && descricao.invalid" class="invalid-feedback">
+
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="preco">Preço</label>
+                <input type="number" [(ngModel)]="usuario.cpf" id="preco" name="preco" #cpf="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && cpf.invalid }" placeholder="Digite o preço">
+                <div *ngIf="f.submitted && cpf.invalid" class="invalid-feedback">
+
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-add-car">Salvar</button>
+            <button type="reset" class="btn btn-secondary btn-add-car" (click)="cleanForm(f)">Cancelar</button>
+        </form>
+    </div>
+</div>
+
+-->

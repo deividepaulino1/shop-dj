@@ -4,7 +4,7 @@
       "id": 1,
       "nome": "Pastel de frango",
       "descricao": "Massa refinada e frango",
-      "preco": 5.5,
+      "preco": 5,
       "estoque": 5,
       "categoria_id": 1
     },
@@ -63,13 +63,19 @@
       "preco": 7.5,
       "estoque": 5,
       "categoria_id": 2
+    },
+    {
+      "nome": "Carne com queijo",
+      "descricao": "Pastel de massa e carne com queijo",
+      "preco": 5.5,
+      "id": 9
     }
   ],
   "usuario": [
     {
       "id": 1,
       "nome": "Deivide",
-      "sobrenome": "Paulino",
+      "sobrenome": "Paulino da Cruz",
       "cpf": 45139475863,
       "telefone": 15988341654,
       "cep": 18276010,

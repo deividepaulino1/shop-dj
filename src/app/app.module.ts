@@ -43,7 +43,8 @@ import { CartDialogComponent } from './shared/card/carrinho/cart-dialog/cart-dia
     StatusPedidoComponent,
     ContentComponent,
     CartHeaderComponent,
-    CartDialogComponent
+    CartDialogComponent,
+    CadastroComponent
     
     
   ],

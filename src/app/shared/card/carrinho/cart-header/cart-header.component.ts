@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SharedServiceService } from 'src/app/shared-service.service';
+import { SharedServiceService } from 'src/assets/services/carrinho/shared-service.service';
 
 @Component({
   selector: 'app-cart-header',
