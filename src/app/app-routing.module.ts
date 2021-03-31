@@ -11,6 +11,7 @@ import { NavComponent } from './shared/nav/nav.component';
 import { StatusPedidoComponent } from './checkout/status-pedido/status-pedido.component';
 import { FormaDePagamentoComponent } from './checkout/forma-de-pagamento/forma-de-pagamento.component';
 import { RevisaoComponent } from './checkout/revisao/revisao.component';
+import { UsuarioAutenticadoComponent } from './autenticacao/login/usuario-autenticado/usuario-autenticado/usuario-autenticado.component';
 
 const routes: Routes = [
 
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'rodape', component: FooterComponent  },
   { path: 'statusPedido', component: StatusPedidoComponent  },
   { path: 'formaDePagamento', component: FormaDePagamentoComponent  },
-  { path: 'revisao', component: RevisaoComponent  }
+  { path: 'revisao', component: RevisaoComponent  },
+  { path: 'minhaconta', component: UsuarioAutenticadoComponent  }
   
   
 

@@ -4,7 +4,7 @@
       "id": 1,
       "nome": "Pastel de frango",
       "descricao": "Massa refinada e frango",
-      "preco": 5,
+      "preco": 5.5,
       "estoque": 5,
       "categoria_id": 1
     },
@@ -73,28 +73,43 @@
   ],
   "usuario": [
     {
-      "id": 1,
-      "nome": "Deivide",
-      "sobrenome": "Paulino da Cruz",
-      "cpf": 45139475863,
-      "telefone": 15988341654,
-      "cep": 18276010,
+      "nome": "Deivide teste",
+      "sobrenome": "12344444",
+      "cpf": "45139475863",
+      "telefone": "15988341654",
+      "cep": "18276010",
       "endereco": "Rua 15 de novembro",
-      "numero": 1663,
-      "observacao": "perto do caetano",
-      "categoria_id": 3
+      "numero": "1663",
+      "observacao": "casa",
+      "login": "deivide",
+      "senha": "1234",
+      "id": 1
     },
     {
-      "id": 2,
-      "nome": "Lucas",
-      "sobrenome": "Melo",
-      "cpf": 44588562860,
-      "telefone": 15996604699,
-      "cep": 18276001,
-      "endereco": "Rua 11 de agosto",
-      "numero": 682,
-      "observacao": "em frente a allegro",
-      "categoria_id": 3
+      "nome": "Ingrid",
+      "sobrenome": "Suelen",
+      "cpf": "44588562860",
+      "telefone": "15996604699",
+      "cep": "18276010",
+      "endereco": "Rua 15",
+      "numero": "1663",
+      "observacao": "casa",
+      "login": "ingrid.suelen",
+      "senha": "123",
+      "id": 2
+    },
+    {
+      "nome": "12312321",
+      "sobrenome": "222222",
+      "cpf": "12312312",
+      "telefone": "312312",
+      "cep": "131",
+      "endereco": "323",
+      "numero": "232",
+      "observacao": "3",
+      "login": "23",
+      "senha": "2",
+      "id": 3
     }
   ],
   "categoria": [
