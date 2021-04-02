@@ -1,0 +1,4 @@
+{
+  "/api/*": "/$1",
+  "/:usuario/:id/show": "/:usuario/:id",
+}

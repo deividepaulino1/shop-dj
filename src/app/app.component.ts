@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ProdutoService} from 'src/assets/services/produto/produto.service';
-import { Produto } from 'src/models/produto';
+import { Produto } from 'src/assets/models/produto';
 
 
 @Component({
@@ -54,4 +54,5 @@ export class AppComponent implements OnInit{
     form.resetForm();
     this.produto = {} as Produto;
   }
+  
 }//

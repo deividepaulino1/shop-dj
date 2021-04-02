@@ -1,8 +1,9 @@
+import { Usuario1 } from 'src/assets/models/usuario';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
-import { Produto } from 'src/models/produto';
+import { Produto } from 'src/assets/models/produto';
 
 
 @Injectable({
@@ -10,6 +11,8 @@ import { Produto } from 'src/models/produto';
 })
 export class ProdutoService {
   url = 'http://localhost:3000/produto'; // api rest fake
+
+  API = 'http://localhost:3000/produto/'; // api rest fake
 
 
   // injetando o HttpClient
@@ -72,4 +75,7 @@ export class ProdutoService {
     console.log(errorMessage);
     return throwError(errorMessage);
   };
+
+
+  
 }

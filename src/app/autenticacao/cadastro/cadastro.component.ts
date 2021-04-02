@@ -1,5 +1,5 @@
-import { Usuario1 } from './../../../models/usuario';
-import { UsuarioService } from './login.service';
+import { Usuario1 } from 'src/assets/models/usuario';
+import { UsuarioService } from '../../../assets/services/login/login.service';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, NgForm } from '@angular/forms';
 

@@ -1,0 +1,7 @@
+
+
+get http://localhost:3000/usuario/?categoria_id=1
+
+
+GET  http://localhost:3000/usuario/ HTTP/1.1
+
