@@ -32,7 +32,6 @@ export class AuthService {
 
       this.mostrarMenuEmitter.emit(true);
       this.ocultarLoginEmitter.emit(false);
-      alert('Usuario ou senha inválidos. Tente Usuário: deivide, senha: 123');
     }
 
   }

@@ -25,7 +25,6 @@ import { FormsModule } from '@angular/forms';
 import { ContentComponent } from './shared/card/carrinho/content/content.component';
 import { CartHeaderComponent } from './shared/card/carrinho/cart-header/cart-header.component';
 import { CartDialogComponent } from './shared/card/carrinho/cart-dialog/cart-dialog.component';
-import { UsuarioAutenticadoComponent } from './autenticacao/login/usuario-autenticado/usuario-autenticado/usuario-autenticado.component';
 
 
 @NgModule({
@@ -45,8 +44,7 @@ import { UsuarioAutenticadoComponent } from './autenticacao/login/usuario-autent
     ContentComponent,
     CartHeaderComponent,
     CartDialogComponent,
-    CadastroComponent,
-    UsuarioAutenticadoComponent,
+    CadastroComponent
     
     
   ],
