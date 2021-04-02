@@ -1,17 +1,14 @@
-import { Usuario1 } from 'src/assets/models/usuario';
-import { UsuarioService } from '../../../assets/services/login/login.service';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, NgForm } from '@angular/forms';
-
-
+import { NgForm } from '@angular/forms';
+import { UsuarioService } from 'src/app/autenticacao/cadastro/login.service';
+import { Usuario1 } from 'src/models/usuario';
 
 @Component({
-  selector: 'app-cadastro',
-  templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.css']
+  selector: 'app-usuario-autenticado',
+  templateUrl: './usuario-autenticado.component.html',
+  styleUrls: ['./usuario-autenticado.component.css']
 })
-export class CadastroComponent implements OnInit {
-
+export class UsuarioAutenticadoComponent implements OnInit {
 
   usuario = {} as Usuario1;
   usuarios: Usuario1[] = [];
@@ -25,15 +22,10 @@ export class CadastroComponent implements OnInit {
   // defini se um produto será criado ou atualizado
   // tslint:disable-next-line:typedef
   saveUsuario(form: NgForm) {
-    if (this.usuario.id !== undefined && this.usuario.login !== undefined ) {
+  {
       this.usuarioService.updateUsuario(this.usuario).subscribe(() => {
         this.cleanForm(form);
-        alert('Usuario cadastrado com suceosso');
-      });
-    } else {
-      this.usuarioService.saveUsuario(this.usuario).subscribe(() => {
-        this.cleanForm(form);
-        alert('Usuario cadastrado com suceosso');
+        alert('Dados editados com sucesso!!!');
       });
     }
   }
