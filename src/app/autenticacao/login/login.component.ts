@@ -1,6 +1,6 @@
 import { Usuario1 } from 'src/assets/models/usuario';
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../../assets/services/user/auth.service';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-login',

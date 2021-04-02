@@ -20,16 +20,18 @@ import { FooterComponent } from './shared/card/footer/footer.component';
 import { RevisaoComponent } from './checkout/revisao/revisao.component';
 import { FormaDePagamentoComponent } from './checkout/forma-de-pagamento/forma-de-pagamento.component';
 import { StatusPedidoComponent } from './checkout/status-pedido/status-pedido.component';
-import { AuthService } from '../assets/services/user/auth.service';
+import { AuthService } from './autenticacao/login/auth.service';
 import { FormsModule } from '@angular/forms';
 import { ContentComponent } from './shared/card/carrinho/content/content.component';
 import { CartHeaderComponent } from './shared/card/carrinho/cart-header/cart-header.component';
 import { CartDialogComponent } from './shared/card/carrinho/cart-dialog/cart-dialog.component';
+import { UsuarioAutenticadoComponent } from './autenticacao/login/usuario-autenticado/usuario-autenticado/usuario-autenticado.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavComponent,
     CardComponent,
     ProdutosComponent,
     ContatoComponent,
@@ -44,7 +46,7 @@ import { CartDialogComponent } from './shared/card/carrinho/cart-dialog/cart-dia
     CartHeaderComponent,
     CartDialogComponent,
     CadastroComponent,
-
+    UsuarioAutenticadoComponent,
     
     
   ],
@@ -56,8 +58,7 @@ import { CartDialogComponent } from './shared/card/carrinho/cart-dialog/cart-dia
     HttpClientModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule,
-    NavComponent
+    MatButtonModule
 
   ],
   providers: [AuthService],
