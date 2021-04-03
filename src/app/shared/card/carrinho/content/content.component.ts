@@ -6,31 +6,59 @@ import { SharedServiceService } from 'src/assets/services/carrinho/shared-servic
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
-  public sampleData = [{
-    name: 'Produto 01',
-    imgUrl: 'card1.png',
-    price: 9.99,
+  public pastelData = [{
+    name: 'Pastel de Calabresa',
+    descricao: 'Pastel recheado com carne, queijo e tudo que há de bom',
+    imgUrl: './pastel-calabresa.png',
+    price: 7.50,
     status: 'false',
   },
   {
-    name: 'Produto 02',
-    imgUrl: 'card2.png',
-    price: 3.99,
+    name: 'Pastel de queijo',
+    imgUrl: './pastel-queijo.png',
+    price: 6.50,
   },
   {
-    name: 'Produto 03',
-    imgUrl: 'card3.png',
-    price: 8.99,
+    name: 'Pastel de carne',
+    imgUrl: './pastel-carne.png',
+    price: 7.00,
   },
   {
-    name: 'Produto 04 ',
-    imgUrl: 'card4.png',
-    price: 5.99,
+    name: 'Pastel de frango ',
+    imgUrl: './pastel-frango.png',
+    price: 7.50,
   },
   {
-    name: 'Produto 05',
-    imgUrl: 'card5.png',
-    price: 4.99,
+    name: 'Pastel de Pizza',
+    imgUrl: './pastel-pizza.png',
+    price: 6.50,
+  }];
+
+  public refriData = [{
+    name: 'Suco de laranja',
+    imgUrl: './pastel-calabresa.png',
+    price: 7.50,
+    status: 'false',
+  },
+  {
+    name: 'Pastel de queijo',
+    imgUrl: './pastel-queijo.png',
+    price: 6.50,
+  },
+  {
+    name: 'Pastel de carne',
+    imgUrl: './pastel-carne.png',
+    price: 7.00,
+  },
+  {
+    name: 'Pastel de frango ',
+    imgUrl: './pastel-frango.png',
+    price: 7.50,
+  },
+  {
+    name: 'Pastel de Pizza',
+    imgUrl: './pastel-pizza.png',
+    price: 6.50,
   }];
   constructor(public sharedSerivce: SharedServiceService) { }
 

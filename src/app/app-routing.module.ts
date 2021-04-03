@@ -1,3 +1,4 @@
+import { MinhaContaComponent } from './shared/card/minha-conta/minha-conta.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastroComponent } from './autenticacao/cadastro/cadastro.component';
@@ -24,7 +25,8 @@ const routes: Routes = [
   { path: 'rodape', component: FooterComponent  },
   { path: 'statusPedido', component: StatusPedidoComponent  },
   { path: 'formaDePagamento', component: FormaDePagamentoComponent  },
-  { path: 'revisao', component: RevisaoComponent  }
+  { path: 'revisao', component: RevisaoComponent  },
+  { path: 'minha-conta', component: MinhaContaComponent  }
   
   
 

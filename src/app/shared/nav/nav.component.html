@@ -1,16 +1,21 @@
-<nav class="menu">
-    <img src="../assets/logo_padrao.svg">
-    <li id="menu__lista" routerLink="./inicio">Inicio</li>
-    <li id="menu__lista" routerLink="./produtos">Produtos </li>
-    <li id="menu__lista" routerLink='./contato'>Contato</li>
-    <li *ngIf='mostrarPerfil' id="menu__lista" routerLink='./carrinho'>Minha conta</li>
-    <li *ngIf='mostrarLogin' id="menu__lista" routerLink='./login'>Login </li>
-    <li *ngIf='mostrarLogin' id="menu__lista" routerLink='./cadastro'>
-        <p>Não tem uma conta? Cadastre-se</p>
-        
-    </li>
-    <app-cart-header></app-cart-header>
+<router-outlet>
+</router-outlet>
 
-</nav>
+<!--*ngIf='mostrarPerfil' id="menu__lista"-->
 
-<router-outlet></router-outlet>
+<div>
+    <nav class="menu ">
+        <ul class="menu__lista">
+            <img src="../assets/logo_padrao.svg">
+            <li class="menu__link  sublinhar" routerLink="./inicio">Início</li>
+            <li class="menu__link  sublinhar" routerLink="./produtos">Produtos</li>
+            <li class="menu__link  sublinhar" routerLink="./contato">Contato</li>
+            <li class="menu__link  sublinhar" routerLink="./minha-conta">Minha Conta</li>
+            <li class="menu__link sublinhar" *ngIf='mostrarLogin' id="menu__lista" routerLink='./login'>Login</li>
+            <li class="menu__link  sublinhar">
+                <app-cart-header></app-cart-header>
+            </li>
+
+
+        </ul>
+    </nav>

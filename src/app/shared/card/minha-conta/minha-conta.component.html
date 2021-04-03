@@ -1,0 +1,50 @@
+<router-outlet></router-outlet>
+<div>
+    <div>
+        <h5>Seus Dados</h5>
+
+        <ul *ngFor="let usuario of usuarios">
+
+            <li>{{usuario.nome}}</li>
+            <li>{{usuario.sobrenome}}</li>
+            <li>{{usuario.cpf}}</li>
+            <li>{{usuario.login}}</li>
+            <li>{{usuario.senha}}</li>
+            <li>
+                <button type="button" (click)="editUsuario(usuario)">Editar</button>
+                <button type="button" (click)="editUsuario(usuario)">Modificar </button>
+
+
+
+                <div>
+                    <h5>Modificar usuário</h5>
+                    <div>
+                        <form id="add-form" (ngSubmit)="f.form.valid && saveUsuario(f)" #f="ngForm" novalidate>
+
+                            <div>
+                                <label for="nome">Nome</label>
+                                <input type="text" [(ngModel)]="usuario.nome" id="nome" name="nome" #nome="ngModel" required [ngClass]="{ 'is-invalid': f.submitted && nome.invalid }" placeholder="Digite a cor">
+                                <div *ngIf="f.submitted && nome.invalid"></div>
+                            </div>
+                            <div>
+                                <label for="sobrenome">Sobrenome</label>
+                                <input type="text" [(ngModel)]="usuario.sobrenome" id="descricao" name="descricao" #descricao="ngModel" required [ngClass]="{ 'is-invalid': f.submitted && descricao.invalid }" placeholder="Digite o modelo">
+                                <div *ngIf="f.submitted && descricao.invalid"></div>
+                            </div>
+                            <div>
+                                <label for="cpf">CPF</label>
+                                <input type="number" [(ngModel)]="usuario.cpf" id="cpf" name="cpf" #cpf="ngModel" required [ngClass]="{ 'is-invalid': f.submitted && cpf.invalid }" placeholder="Digite o CPF">
+                                <div *ngIf="f.submitted && cpf.invalid">
+
+                                </div>
+                                <div>
+                                    <label for="login">Login</label>
+                                    <input type="text" [(ngModel)]="usuario.login" id="login" name="login" #login="ngModel" required [ngClass]="{ 'is-invalid': f.submitted && login.invalid }" placeholder="Digite o login">
+                                    <div *ngIf="f.submitted && login.invalid">
+
+                                    </div>
+                                </div>
+                                <button type="submit">Salvar</button>
+                                <button type="reset" (click)="cleanForm(f)">Cancelar</button>
+
+                            </div>

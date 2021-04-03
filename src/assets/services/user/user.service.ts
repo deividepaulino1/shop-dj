@@ -21,14 +21,14 @@ export class UserAuth {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
   // Obtem todos os produtos
-  getUser(): Observable<UserAuth[]> {
+  getUsuario(): Observable<UserAuth[]> {
     return this.httpClient.get<UserAuth[]>(this.url)
       .pipe(
         retry(2),
         catchError(this.handleError))
   }
   // Obtem produto pelo id
-  getUserId(id: number): Observable<UserAuth> {
+  getUsuarioId(id: number): Observable<UserAuth> {
     return this.httpClient.get<UserAuth>(this.url + '/' + id)
       .pipe(
         retry(2),

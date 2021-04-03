@@ -25,6 +25,7 @@ import { FormsModule } from '@angular/forms';
 import { ContentComponent } from './shared/card/carrinho/content/content.component';
 import { CartHeaderComponent } from './shared/card/carrinho/cart-header/cart-header.component';
 import { CartDialogComponent } from './shared/card/carrinho/cart-dialog/cart-dialog.component';
+import { MinhaContaComponent } from './shared/card/minha-conta/minha-conta.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { CartDialogComponent } from './shared/card/carrinho/cart-dialog/cart-dia
     ContentComponent,
     CartHeaderComponent,
     CartDialogComponent,
-    CadastroComponent
+    CadastroComponent,
+    MinhaContaComponent
     
     
   ],

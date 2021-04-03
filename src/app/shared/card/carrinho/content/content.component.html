@@ -1,17 +1,32 @@
-<div>
-    <img src="..//..//assets/bg.png">
-    <div class="gog_cards_wrapper">
-        <div class="gog_cards" *ngFor="let data of sampleData">
-            <img src="..">
-            <div class="gog_cards_details">
-                <p>
-                    {{data.name}}
-                </p>
-                <!-- //currency pipe -->
-                <div>
-                    <span (click)="addItems(data)">{{data.status === 'Adicionado'? data.status:(data.price | currency)}}</span>
+<br>
+<div class="gog_cards_wrapper">
+    <div class="gog_cards" *ngFor="let data of pastelData">
+        <img src="..//..//assets/{{data.imgUrl}}">
+        <div class="gog_cards_details">
+            <p>
+                {{data.name}}
+            </p>
+            <!-- //currency pipe -->
+            <div>
+                <span (click)="addItems(data)">{{data.status === 'Adicionado'? data.status:(data.price | currency )}}</span>
 
-                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<div class="gog_cards_wrapper">
+    <div class="gog_cards" *ngFor="let data of refriData">
+        <img src="..//..//assets/{{data.imgUrl}}">
+        <div class="gog_cards_details">
+            <p>
+                {{data.name}}
+            </p>
+            <!-- //currency pipe -->
+            <div>
+                <span (click)="addItems(data)">{{data.status === 'Adicionado'? data.status:(data.price | currency)}}</span>
+
             </div>
         </div>
     </div>
