@@ -1,9 +1,7 @@
 <router-outlet></router-outlet>
 <div class="container">
-    <label>Login </label>
-    <input [(ngModel)]='usuario.login' type="text" id="usuario" placeholder="Usuario: deivide">
-    <label>Senha </label>
-    <input [(ngModel)]="usuario.senha" type="text" id="senha" placeholder="Senha: 123">
+    <p>Acesse a sua conta</p>
+    <input [(ngModel)]='usuario.login' type="text" id="usuario" placeholder="Usuario">
+    <input class="senha" [(ngModel)]="usuario.senha" type="password" id="senha" placeholder="Senha: 13">
     <button (click)="fazerLogin()" type="submit">Fazer Login</button>
-    <div class="container__cadastro" routerLink='../cadastro'>Não tem uma conta? Cadastre-se aqui!</div>
 </div>

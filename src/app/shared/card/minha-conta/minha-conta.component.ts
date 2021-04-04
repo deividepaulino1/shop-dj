@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Usuario1 } from 'src/assets/models/usuario';
 import { UsuarioService } from 'src/assets/services/login/login.service';
 
@@ -13,22 +14,15 @@ export class MinhaContaComponent implements OnInit {
   usuario = {} as Usuario1;
   usuarios: Usuario1[] =[];
 
-  constructor(private usuarioService: UsuarioService) {}
+  constructor(private usuarioService: UsuarioService, private router: Router) {}
 
   ngOnInit() {
     this.getUsuario();
   }
   // defini se um produto será criado ou atualizado
   saveUsuario(form: NgForm) {
-    if (this.usuario.id !== undefined) {
-      this.usuarioService.updateUsuario(this.usuario).subscribe(() => {
-        this.cleanForm(form);
+          this.usuarioService.updateUsuario(this.usuario).subscribe(() => {
       });
-    } else {
-      this.usuarioService.saveUsuario(this.usuario).subscribe(() => {
-        this.cleanForm(form);
-      });
-    }
   }
   // Chama o serviço para listar os produtos
   getUsuario() {
@@ -51,5 +45,9 @@ export class MinhaContaComponent implements OnInit {
     this.getUsuario();
     form.resetForm();
     this.usuario = {} as Usuario1;
+  }
+
+  reload(){
+    this.router.navigate(['/inicio']);
   }
 }//

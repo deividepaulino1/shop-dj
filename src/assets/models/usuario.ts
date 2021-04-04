@@ -4,6 +4,7 @@ export class Usuario1 {
     nome: string ='';
     sobrenome: string ='';
     cpf: string ='';
+    cep: string ='';
     endereco: string ='';
     numero: string ='';
     observacao: string ='';

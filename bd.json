@@ -76,42 +76,15 @@
       "id": 1,
       "nome": "Deivide",
       "login": "wallbark234",
-      "senha": "123",
+      "senha": "1234",
       "sobrenome": "Paulino da Cruz",
       "cpf": "45139475863",
       "telefone": "15988341654",
-      "cep": "18276010",
-      "endereco": "Rua 15 de novembro",
-      "numero": 1663,
-      "observacao": "perto do caetano",
+      "cep": 18276010,
+      "endereco": "Rua 16 de novembro",
+      "numero": "1663",
+      "observacao": "centro",
       "categoria_id": 3
-    },
-    {
-      "id": 2
-    },
-    {
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
-      "id": 8
-    },
-    {
-      "id": 9
-    },
-    {
-      "id": 10
     }
   ],
   "categoria": [

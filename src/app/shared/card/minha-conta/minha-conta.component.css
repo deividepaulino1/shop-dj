@@ -1,0 +1,84 @@
+h2 {
+    border: orchid 1px solid;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+table {
+    border: grey 1px solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.container__dados {
+    border: orchid 1px solid;
+    display: flex;
+    justify-content: center;
+    background: orange;
+    padding: 0 200px;
+    align-items: center;
+}
+
+th,
+td {
+    color: rgb(250, 250, 250);
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#endereco__container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#endereco {
+    color: black;
+}
+
+.botao {
+    background: rgb(133, 55, 55);
+    border: none;
+    padding: 10px 50px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: orange;
+    text-align: center;
+    margin: 0 40%;
+}
+
+.botao:hover {
+    background: yellow;
+    transition: 1s;
+    font-size: 14px;
+    align-items: center;
+    text-align: center;
+}
+
+.botao:active {
+    background: orange;
+    color: white;
+}
+
+#ocultar {
+    display: none;
+}
+
+#mostra {
+    display: none;
+}
+
+#ocultar:checked~#mostra {
+    display: block;
+}
+
+#ocultar:checked~#mostra {
+    display: block;
+}
+
+.editar {
+    border: 1px solid black;
+}
