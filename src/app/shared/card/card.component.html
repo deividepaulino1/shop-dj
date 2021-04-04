@@ -1,5 +1,28 @@
 <router-outlet></router-outlet>
-<div><p>Destaques</p>
-<p>Mais vendidos</p>
-<p>Promoções</p>
+<div class="slide">
+    <i>
+        <input checked type="radio" name="slider" style="background-image: url('../../../assets/pasteis/slide4.jpg');" title="Pastel de hoje">
+        <input type="radio" name="slider" style="background-image: url('../../../assets/pasteis/slide1.jpg');" title="Pastel de amanhã">
+        <input type="radio" name="slider" style="background-image: url('../../../assets/pasteis/slide3.jpg');" title="Pastel de depois de amanhã">
+        <input type="radio" name="slider" style="background-image: url('../../../assets/pasteis/slide2.jpg');" title="Pastel de quinta">
+        <input type="radio" name="slider" style="background-image: url('../../../assets/pasteis/slide5.jpeg');" title="Pastel de sexta">
+    </i>
+</div>
+
+<p class="sublinhar"> Destaques da semana</p>
+<div class="container">
+    <div class="container__produtos" *ngFor="let data of pastelData">
+        <img src="..//..//assets/{{data.imgUrl}}">
+        <div>
+            <p>
+                {{data.name}}
+            </p>
+            <!-- //currency pipe -->
+            <div>
+                <span (click)="addItems(data)">{{data.status === 'Adicionado'? data.status:(data.price | currency : 'R$ ' )}}</span>
+
+            </div>
+        </div>
+    </div>
+
 </div>

@@ -1,33 +1,37 @@
-<br>
-<div class="gog_cards_wrapper">
-    <div class="gog_cards" *ngFor="let data of pastelData">
+<p class="sublinhar"> Pasteis</p>
+<div class="container">
+    <div class="container__produtos" *ngFor="let data of pastelData">
         <img src="..//..//assets/{{data.imgUrl}}">
-        <div class="gog_cards_details">
+        <div>
             <p>
                 {{data.name}}
             </p>
             <!-- //currency pipe -->
             <div>
-                <span (click)="addItems(data)">{{data.status === 'Adicionado'? data.status:(data.price | currency )}}</span>
+                <span (click)="addItems(data)">{{data.status === 'Adicionado'? data.status:(data.price | currency : 'R$ ' )}}</span>
 
             </div>
         </div>
     </div>
+
 </div>
 
-<br>
-<div class="gog_cards_wrapper">
-    <div class="gog_cards" *ngFor="let data of refriData">
+<p class="sublinhar"> Bebidas</p>
+<div class="container">
+
+
+    <div class="container__produtos" *ngFor="let data of refriData">
         <img src="..//..//assets/{{data.imgUrl}}">
-        <div class="gog_cards_details">
+        <div>
             <p>
                 {{data.name}}
             </p>
             <!-- //currency pipe -->
             <div>
-                <span (click)="addItems(data)">{{data.status === 'Adicionado'? data.status:(data.price | currency)}}</span>
+                <span (click)="addItems(data)">{{data.status === 'Adicionado'? data.status:(data.price | currency : 'R$ ' )}}</span>
 
             </div>
         </div>
     </div>
+
 </div>

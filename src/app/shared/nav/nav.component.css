@@ -9,6 +9,7 @@ img {
 
 .menu__link:focus {
     color: orange;
+    outline: none;
 }
 
 .menu:hover .menu__link:hover {

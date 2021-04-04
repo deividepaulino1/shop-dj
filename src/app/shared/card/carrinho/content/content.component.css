@@ -1,79 +1,98 @@
-.gog_content_body {
-    padding: 0 100px !important;
+img {
+    max-width: 200px;
+    height: 200px;
+    border-radius: 5px;
 }
 
-.gog_home_game_content>img {
-    width: 100%;
-    max-height: 500px;
-    min-height: 371px
+img:hover {
+    width: 195px;
+    height: 195px;
+    opacity: .85;
 }
 
-.gog_cards_details {}
+p {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5px;
+    font-weight: bold;
+}
 
-.gog_cards_wrapper {
+.container {
     display: flex;
-    margin: 20px 0px;
-    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
-.gog_cards {
-    width: 18%;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    min-height: 250px;
-    background-color: #dedede;
-    box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.15);
+.container__produtos {
+    margin: 10px;
+    text-align: center;
 }
 
-.gog_cards_details>div {
-    position: absolute;
-    bottom: 10px;
-    right: 5px;
-    text-align: right;
-}
-
-.gog_cards_details>div>span {
-    font-size: 13px;
-    font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: right;
-    color: rgba(64, 64, 64, 0.75);
+span {
+    font-size: 12px;
+    font-weight: bold;
+    color: rgba(34, 119, 23, 0.75);
     box-shadow: 0px 1px 3px 0 rgba(0, 0, 0, 0.25);
     border: solid 1px rgba(0, 0, 0, 0.25);
-    padding: 2px 8px;
+    padding: 5px 8px;
     margin: 0px 5px;
     border-radius: 5px;
-    float: right;
     cursor: pointer;
 }
 
-.gog_cards_details>div>span:hover {
+span:hover {
     color: #ffffff;
-    background-color: #0a0090;
+    background-color: #036107;
     border: solid 1px rgba(255, 255, 255, 0.25);
+    transition: .5s background-color;
+    padding: 8px 10px;
 }
 
-.gog_cards_details {
-    padding: 10px;
+span:active {
+    color: #ffffff;
+    padding: 6px 8px;
 }
 
-.gog_cards_details>p {
-    margin-top: 0px;
-    font-size: 14px;
-    font-weight: 600;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.21;
-    letter-spacing: normal;
-    text-align: left;
-    color: #212121;
-    text-transform: uppercase;
+.titulo {
+    color: rgb(182, 104, 3);
+    font-size: 25px;
+    margin-top: 30px;
 }
 
-.gog_cards>img {
+.sublinhar {
+    position: relative;
+    overflow: hidden;
+    will-change: color;
+    transition: color .10s ease-out;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+.sublinhar::before,
+.sublinhar::after {
+    content: "";
+    width: 0;
+    height: 5px;
+    background-color: orange;
+    will-change: width;
+    transition: width .1s ease-out;
+    position: absolute;
+    bottom: 0;
+}
+
+.sublinhar::before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sublinhar::after {
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.sublinhar:hover::before,
+.sublinhar:hover::after {
     width: 100%;
+    transition-duration: .4s;
 }

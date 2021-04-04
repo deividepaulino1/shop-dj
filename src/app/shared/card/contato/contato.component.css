@@ -1,0 +1,90 @@
+div {
+    border: coral 1px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 12px;
+    font-style: italic;
+    color: rgb(182, 104, 3);
+    line-height: 140%;
+    margin-top: 30px;
+}
+
+h1:hover {
+    font-size: 14px;
+    opacity: 0.7;
+    line-height: 160%;
+    transition: 1s font-size;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+h2:hover {
+    font-size: 22px;
+    transition: 1s;
+    color: rgb(182, 104, 3);
+}
+
+p,
+a {
+    font-size: 20px;
+    line-height: 200%;
+    text-decoration: none;
+}
+
+a {
+    color: rgb(182, 104, 3)
+}
+
+#sublinhar {
+    position: relative;
+    overflow: hidden;
+    will-change: color;
+    transition: color .10s ease-out;
+}
+
+#sublinhar::before,
+#sublinhar::after {
+    content: "";
+    width: 0;
+    height: 5px;
+    background-color: orange;
+    will-change: width;
+    transition: width .1s ease-out;
+    position: absolute;
+    bottom: 0;
+}
+
+#sublinhar::before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#sublinhar::after {
+    right: 50%;
+    transform: translateX(50%);
+}
+
+#sublinhar:hover::before,
+#sublinhar:hover::after {
+    width: 100%;
+    transition-duration: .4s;
+}
+
+iframe {
+    opacity: .3;
+    margin-bottom: 50px;
+}
+
+iframe:hover {
+    opacity: 1;
+    transition: 1s;
+}

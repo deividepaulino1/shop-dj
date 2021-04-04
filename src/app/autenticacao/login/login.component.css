@@ -13,3 +13,12 @@
 .container__cadastro {
     margin: 5%;
 }
+
+label {
+    border: lawngreen solid 1px;
+}
+
+input {
+    border: rgb(244, 244, 245) solid 1px;
+    font-size: 15px;
+}

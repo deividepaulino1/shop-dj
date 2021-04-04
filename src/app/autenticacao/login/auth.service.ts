@@ -25,7 +25,7 @@ export class AuthService {
       this.mostrarMenuEmitter.emit(false);
       this.ocultarLoginEmitter.emit(true);
       
-      this.router.navigate(['/']);
+      this.router.navigate(['/produtos']);
 
     } else {
       this.usuarioAutenticado = false;
