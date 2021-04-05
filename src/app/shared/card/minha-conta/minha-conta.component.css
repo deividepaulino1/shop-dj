@@ -1,23 +1,21 @@
 h2 {
-    border: orchid 1px solid;
     display: flex;
     justify-content: center;
     font-weight: bold;
 }
 
 table {
-    border: grey 1px solid;
     display: flex;
     flex-direction: column;
 }
 
 .container__dados {
-    border: orchid 1px solid;
     display: flex;
     justify-content: center;
     background: orange;
-    padding: 0 200px;
-    align-items: center;
+    padding: 0 50%;
+    height: 480px;
+    align-items: top;
 }
 
 th,
@@ -26,7 +24,7 @@ td {
     font-size: 18px;
     display: flex;
     flex-direction: row;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-left: 10px;
 }
 
@@ -42,12 +40,10 @@ td {
 .botao {
     background: rgb(133, 55, 55);
     border: none;
-    padding: 10px 50px;
+    padding: 10px 80px;
     font-weight: bold;
     border-radius: 5px;
     color: orange;
-    text-align: center;
-    margin: 0 40%;
 }
 
 .botao:hover {
@@ -81,4 +77,14 @@ td {
 
 .editar {
     border: 1px solid black;
+    display: flex;
+    text-align: center;
+}
+
+#form-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
