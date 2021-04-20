@@ -42,27 +42,33 @@
 
     <input type="checkbox" id="ocultar">
 
-    <div class="editar" id="mostra">
-        <h5>Insira os novo dados de endereço</h5>
-        <div>
+    <div id="mostra" class="container__edicao">
+        <div class="container__edicao__componentes">
+            <h5>Insira os novo dados de endereço</h5>
             <form id="add-form" (ngSubmit)="f.form.valid && saveUsuario(f)" #f="ngForm" novalidate>
                 <div id="form-group">
                     <label for="cep">CEP</label>
-                    <input type="number" [(ngModel)]="usuario.cep" id="cep" name="cep" #cep="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && cep.invalid }" placeholder="Digite o cep">
+                    <input type="number" [(ngModel)]="usuario.cep" id="cep" name="cep" #cep="ngModel" required
+                        class="form-control" [ngClass]="{ 'is-invalid': f.submitted && cep.invalid }"
+                        placeholder="Digite o cep">
                     <div *ngIf="f.submitted && cep.invalid" class="invalid-feedback">
 
                     </div>
                 </div>
                 <div id="form-group">
                     <label for="endereco">Endereço</label>
-                    <input type="text" [(ngModel)]="usuario.endereco" id="endereco" name="endereco" #endereco="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && endereco.invalid }" placeholder="Digite o endereco">
+                    <input type="text" [(ngModel)]="usuario.endereco" id="endereco" name="endereco" #endereco="ngModel"
+                        required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && endereco.invalid }"
+                        placeholder="Digite o endereco">
                     <div *ngIf="f.submitted && endereco.invalid" class="invalid-feedback">
 
 
                     </div>
                     <div id="form-group">
                         <label for="numero">Numero</label>
-                        <input type="text" [(ngModel)]="usuario.numero" id="numero" name="numero" #numero="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && numero.invalid }" placeholder="Digite o numero">
+                        <input type="text" [(ngModel)]="usuario.numero" id="numero" name="numero" #numero="ngModel"
+                            required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && numero.invalid }"
+                            placeholder="Digite o numero">
                         <div *ngIf="f.submitted && numero.invalid" class="invalid-feedback">
 
                         </div>
@@ -70,14 +76,18 @@
                 </div>
                 <div id="form-group">
                     <label for="observacao">Observação</label>
-                    <input type="text" [(ngModel)]="usuario.observacao" id="observacao" name="observacao" #observacao="ngModel" required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && observacao.invalid }" placeholder="Digite uma observacao">
+                    <input type="text" [(ngModel)]="usuario.observacao" id="observacao" name="observacao"
+                        #observacao="ngModel" required class="form-control"
+                        [ngClass]="{ 'is-invalid': f.submitted && observacao.invalid }"
+                        placeholder="Digite uma observacao">
                     <div *ngIf="f.submitted && observacao.invalid" class="invalid-feedback">
 
                     </div>
                 </div>
-                <button type="submit" onCLick="window.location.reload()" for>Salvar</button>
-                <button type="reset " (click)="cleanForm(f) " onCLick="window.location.reload()">Cancelar</button>
-
+                <div class="botao__alteracao">
+                    <button type="submit" onCLick="window.location.reload()" for>Salvar</button>
+                    <button type="reset " (click)="cleanForm(f) " onCLick="window.location.reload()">Cancelar</button>
+                </div>
             </form>
         </div>
     </div>

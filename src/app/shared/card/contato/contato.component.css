@@ -1,5 +1,4 @@
 div {
-    border: coral 1px solid;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +8,7 @@ div {
 h1 {
     font-size: 12px;
     font-style: italic;
-    color: rgb(182, 104, 3);
+    color: #fc6200;
     line-height: 140%;
     margin-top: 30px;
 }
@@ -30,7 +29,7 @@ h2 {
 h2:hover {
     font-size: 22px;
     transition: 1s;
-    color: rgb(182, 104, 3);
+    color: #fc6200(182, 104, 3);
 }
 
 p,
@@ -41,7 +40,7 @@ a {
 }
 
 a {
-    color: rgb(182, 104, 3)
+    color: #fc6200;
 }
 
 #sublinhar {
@@ -56,7 +55,7 @@ a {
     content: "";
     width: 0;
     height: 5px;
-    background-color: orange;
+    background-color: #fc6200;
     will-change: width;
     transition: width .1s ease-out;
     position: absolute;
@@ -88,3 +87,5 @@ iframe:hover {
     opacity: 1;
     transition: 1s;
 }
+
+

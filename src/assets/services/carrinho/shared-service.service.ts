@@ -5,6 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class SharedServiceService {
+  total = 0;
   public tempData: any = [] ;
   public sampleData = new BehaviorSubject<any[]>([]);
   sampleData$ = this.sampleData.asObservable();
@@ -45,4 +46,24 @@ export class SharedServiceService {
     this.tempData = [];
     this.sampleData.next(this.tempData);
   }
+
+  getPricePastel(data) {
+
+
+    for (let i = 0; i < this.tempData.length; i++) {
+      this.sampleData.next(this.tempData);
+  
+
+      this.total += (this.tempData[i].price);
+
+      console.log(this.total);
+      // output: coluna especifica
+
+
+    }
+    return;
+  }
+
+
+
 }

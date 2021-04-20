@@ -1,5 +1,22 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    background-color: #aaaaaa;
+    margin-top: 30px;
+    transition: 1s;
+
+}
+
+.container:hover {
+    background-color: #fc6200;
+    transition: 1s;
+
+}
 p { 
-    font-size: 20px;
-    margin-top: 200px;
+    color: white;
+    font-size: 13px;
     text-align: center;
+    padding-top: 10px;
+    margin-left: 10px;
 }

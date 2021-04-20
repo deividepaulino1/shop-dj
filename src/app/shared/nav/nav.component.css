@@ -1,14 +1,18 @@
 li {
     list-style-type: none;
 }
+div { 
+    display: flex;
+    justify-content: center;
+
+}
 
 img {
     max-width: 10%;
-    margin-right: 10%;
 }
 
 .menu__link:focus {
-    color: orange;
+    color: #fc6200;
     outline: none;
 }
 
@@ -48,7 +52,7 @@ img {
     content: "";
     width: 0;
     height: 5px;
-    background-color: orange;
+    background-color: #fc6200;
     will-change: width;
     transition: width .1s ease-out;
     position: absolute;
@@ -70,3 +74,4 @@ img {
     width: 100%;
     transition-duration: .4s;
 }
+

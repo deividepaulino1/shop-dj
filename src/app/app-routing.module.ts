@@ -26,9 +26,8 @@ const routes: Routes = [
   { path: 'statusPedido', component: StatusPedidoComponent  },
   { path: 'formaDePagamento', component: FormaDePagamentoComponent  },
   { path: 'revisao', component: RevisaoComponent  },
-  { path: 'minha-conta', component: MinhaContaComponent  }
-  
-  
+  { path: 'minha-conta', component: MinhaContaComponent  },
+  { path: '', component: CardComponent  }
 
 ];
 

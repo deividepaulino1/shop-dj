@@ -6,13 +6,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-left: 33%;
-    margin-top: 33px;
-    background: orange;
+    background: #fc6200;
     border-radius: 20px;
     box-shadow: 6px 7px 27px 0px rgba(0, 0, 0, 0.28);
     -webkit-box-shadow: 6px 7px 27px 0px rgba(0, 0, 0, 0.28);
     -moz-box-shadow: 6px 7px 27px 0px rgba(0, 0, 0, 0.28);
+
 }
 
 p {
@@ -40,7 +39,7 @@ button {
     padding: 10px 15%;
     font-weight: bold;
     border-radius: 5px;
-    color: orange;
+    color: #ccaa95;
 }
 
 button:hover {
@@ -50,6 +49,18 @@ button:hover {
 }
 
 button:active {
-    background: orange;
+    background: #fc6200;
     color: white;
+}
+
+
+
+div { 
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.display {
+    min-height: 600px;
 }

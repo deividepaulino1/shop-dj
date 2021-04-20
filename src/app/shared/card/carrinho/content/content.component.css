@@ -12,7 +12,7 @@ img:hover {
 
 p {
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     margin-top: 5px;
     font-weight: bold;
 }
@@ -74,7 +74,7 @@ span:active {
     content: "";
     width: 0;
     height: 5px;
-    background-color: orange;
+    background-color: #fc6200;
     will-change: width;
     transition: width .1s ease-out;
     position: absolute;

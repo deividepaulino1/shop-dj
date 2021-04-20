@@ -1,2 +1,33 @@
 <router-outlet></router-outlet>
-<p>revisao works!</p>
+<div>
+    <div class="container__limpar-carrinho">
+
+    </div>
+    <div *ngIf="sampleData.length > 0">
+        <div class="container" *ngFor="let data of sampleData">
+            <img class="lista__imagem" src="..//..//assets/{{data.imgUrl}}">
+            <div>
+                <p class="lista__descricao">{{data.name}}</p>
+                <span class="lista__remover" (click)="removeData(data)">Remover do carrinho</span>
+            </div>
+            <div>
+
+            </div>
+            <span class="lista__preco">{{data.price | currency: 'R$ ' }}</span>
+        </div>
+    </div>
+
+    <div class="container__limpar">
+        <div>
+            <button class="limpar__carrinho" (click)="clearCart()">Limpar carrinho</button>
+        </div>
+    <div>
+        <span class="itens__carrinho">{{sampleData.length}} {{sampleData.length > 1 ? 'Itens' : 'Item'}} no seu
+            carrinho</span>
+    </div>
+    <div>
+        <span></span>
+    </div>
+
+    <button routerLink="./formaDePagamento">Finalizar pedido</button>
+</div>

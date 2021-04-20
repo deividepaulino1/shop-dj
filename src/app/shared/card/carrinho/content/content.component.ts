@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { SharedServiceService } from 'src/assets/services/carrinho/shared-service.service';
 @Component({
   selector: 'app-content',
@@ -6,9 +7,9 @@ import { SharedServiceService } from 'src/assets/services/carrinho/shared-servic
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
+  public sampleData = new BehaviorSubject<any[]>([]);
   public pastelData = [{
     name: 'Pastel de Calabresa',
-    descricao: 'Pastel recheado com carne, queijo e tudo que há de bom',
     imgUrl: './pastel-calabresa.png',
     price: 7.50,
     status: 'false',
@@ -60,15 +61,36 @@ export class ContentComponent implements OnInit {
     imgUrl: './produto-agua.png',
     price: 6.50,
   }];
+  nextPastel: any;
+
   constructor(public sharedSerivce: SharedServiceService) { }
 
 
   ngOnInit() {
   }
- 
-  addItems(data) {
-    
-    this.sharedSerivce.setItemData(data);
-    data.status = 'Adicionado'; 
+
+  addItems(pastelData) {
+
+    this.sharedSerivce.setItemData(pastelData);
+    pastelData.status = 'Adicionado';
+    this.sharedSerivce.getPricePastel(pastelData);
   }
+
+
+  PrecoTeste(pastelData) {
+    let valorTotal = 0;
+  // tslint:disable-next-line:prefer-for-of
+    for (let i = 0; i < pastelData.length; i++) {
+      console.log(pastelData[i].price);
+      valorTotal += (pastelData[i].price);
+      this.nextPastel.next(this.pastelData);
+  }
+    console.log(valorTotal);
+    return valorTotal;
+}
+
+
+
+
+
 }

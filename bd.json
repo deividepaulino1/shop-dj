@@ -75,15 +75,15 @@
     {
       "id": 1,
       "nome": "Deivide",
-      "login": "wallbark234",
-      "senha": "1234",
+      "login": "deivide",
+      "senha": "123",
       "sobrenome": "Paulino da Cruz",
       "cpf": "45139475863",
       "telefone": "15988341654",
       "cep": 18276010,
       "endereco": "Rua 15 de novembro",
       "numero": "1663",
-      "observacao": "teste",
+      "observacao": "teste3 ",
       "categoria_id": 3
     }
   ],

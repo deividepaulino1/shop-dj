@@ -1,19 +1,19 @@
 <router-outlet>
 </router-outlet>
 
-<!--*ngIf='mostrarPerfil' id="menu__lista"-->
+<!---->
 
 <div>
+    <img src="../assets/logo_padrao.svg">
     <nav class="menu ">
         <ul class="menu__lista">
-            <img src="../assets/logo_padrao.svg">
             <li class="menu__link  sublinhar" routerLink="./inicio">Início</li>
             <li class="menu__link  sublinhar" routerLink="./produtos">Produtos</li>
             <li class="menu__link  sublinhar" routerLink="./contato">Contato</li>
-            <li class="menu__link  sublinhar" routerLink="./minha-conta">Minha Conta</li>
+            <li class="menu__link  sublinhar" routerLink="./minha-conta" *ngIf='mostrarPerfil' id="menu__lista">Minha Conta</li>
             <li class="menu__link sublinhar" *ngIf='mostrarLogin' id="menu__lista" routerLink='./login'>Login</li>
-            <li class="menu__link  sublinhar">
-                <app-cart-header></app-cart-header>
+            <li class="menu__link  sublinhar" routerLink="./revisao">
+                <app-cart-header ></app-cart-header>
             </li>
 
 

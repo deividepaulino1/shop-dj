@@ -1,5 +1,5 @@
-<div>
-    <div>
+<!--<div >
+    <div  >
         <div>
             <span>{{sampleData.length}} {{sampleData.length > 1 ? 'Itens' : 'Item'}} no seu carrinho</span>
         </div>
@@ -11,15 +11,15 @@
         </div>
     </div>
     <div *ngIf="sampleData.length > 0">
-        <div *ngFor="let data of sampleData">
-            <img src="..//..//assets/{{data.imgUrl}}">
+        <div class="lista" *ngFor="let data of sampleData">
+            <img class="lista__imagem" src="..//..//assets/{{data.imgUrl}}">
             <div>
-                <p>{{data.name}}</p>
-                <span (click)="removeData(data)">Remover do carrinho</span>
+                <p class="lista__descricao">{{data.name}}</p>
+                <span class="lista__remover" (click)="removeData(data)">Remover do carrinho</span>
             </div>
             <div>
-                <span>{{data.price | currency}}</span>
+                <span class="lista__preco">{{data.price | currency}}</span>
             </div>
         </div>
     </div>
-</div>
+</div>!-->
