@@ -25,9 +25,10 @@
         <span class="itens__carrinho">{{sampleData.length}} {{sampleData.length > 1 ? 'Itens' : 'Item'}} no seu
             carrinho</span>
     </div>
-    <div>
-        <span></span>
-    </div>
+    <div class="total" >
+        <span >Total: </span>
+        <span class="total__preco" [innerHTML]="total | currency: 'R$ '">&nbsp;</span>
+              </div>
 
-    <button routerLink="./formaDePagamento">Finalizar pedido</button>
+    <button href='formaDePagamento'>Finalizar pedido</button>
 </div>

@@ -10,9 +10,8 @@ export class CardComponent implements OnInit {
 
   public pastelData = [{
     name: 'ComBão',
-    descricao: 'Pastel recheado com carne, queijo e tudo que há de bom',
     imgUrl: './destaques/combo-pastel.png',
-    price: '14.99',
+    price: 14.99,
     status: 'false',
   },
   {

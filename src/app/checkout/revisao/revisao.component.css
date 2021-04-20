@@ -95,3 +95,11 @@ button:active {
     background: white;
     color: orangered;
 }
+
+.total { 
+    font-weight: bold;
+}
+
+.total__preco { 
+    color: green;
+}

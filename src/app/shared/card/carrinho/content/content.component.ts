@@ -73,24 +73,6 @@ export class ContentComponent implements OnInit {
 
     this.sharedSerivce.setItemData(pastelData);
     pastelData.status = 'Adicionado';
-    this.sharedSerivce.getPricePastel(pastelData);
   }
-
-
-  PrecoTeste(pastelData) {
-    let valorTotal = 0;
-  // tslint:disable-next-line:prefer-for-of
-    for (let i = 0; i < pastelData.length; i++) {
-      console.log(pastelData[i].price);
-      valorTotal += (pastelData[i].price);
-      this.nextPastel.next(this.pastelData);
-  }
-    console.log(valorTotal);
-    return valorTotal;
-}
-
-
-
-
 
 }
