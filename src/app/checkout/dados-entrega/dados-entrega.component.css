@@ -1,0 +1,161 @@
+h2 {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+}
+
+.container__dados {
+    display: flex;
+    justify-content: center;
+    background: #fc6200;
+    padding: 0 50%;
+    height: 400px;
+    align-items: top;
+}
+
+th, td {
+    color: rgb(250, 250, 250);
+    font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#endereco__container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#endereco {
+    color: black;
+}
+
+.botao {
+    background: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 80px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #fc6200;
+    font-size: 14px;
+}
+
+.botao:hover {
+    background: yellow;
+    transition: .3s;
+    align-items: center;
+    text-align: center;
+}
+
+.botao:active {
+    background: #fc6200;
+    color: white;
+}
+
+#ocultar {
+    display: none;
+}
+
+#mostra {
+    display: none;
+}
+
+#ocultar:checked~#mostra {
+    display: block;
+}
+
+#ocultar:checked~#mostra {
+    display: block;
+}
+
+.editar {
+    display: flex;
+    text-align: center;
+}
+
+.container__edicao {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container__edicao__componentes {
+    width: 500px;
+    height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fc6200;
+    border-radius: 20px;
+    box-shadow: 6px 7px 27px 0px rgba(0, 0, 0, 0.28);
+    -webkit-box-shadow: 6px 7px 27px 0px rgba(0, 0, 0, 0.28);
+    -moz-box-shadow: 6px 7px 27px 0px rgba(0, 0, 0, 0.28);
+}
+
+#form-group {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(255, 255, 0);
+    margin-top: 20px;
+}
+
+input {
+    border: rgb(215, 215, 218) solid 1px;
+    font-size: 15px;
+    padding: 8px 10px;
+    background: rgb(240, 240, 240);
+    opacity: .7;
+    margin-top: 5px;
+}
+
+button, .button {
+    background: yellow;
+    border: none;
+    margin-top: 20px;
+    padding: 10px 75px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #fc6200;
+}
+
+button:hover {
+    background: white;
+    transition: .3s;
+}
+
+.button:hover {
+    background: white;
+    transition: .3s;
+}
+
+button:active {
+    background: #fc6200;
+    color: black;
+}
+
+.button:active {
+    background: #fc6200;
+    color: black;
+}
+
+.botao__alteracao {
+    display: flex;
+    flex-direction: column;
+}

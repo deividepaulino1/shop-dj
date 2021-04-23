@@ -20,9 +20,6 @@ export class LoginComponent implements OnInit {
     console.log(this.usuario);
     console.log(this.usuario.login);
     this.authService.fazerLogin(this.usuario);
-
-
-
   }
 
 }

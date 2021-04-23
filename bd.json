@@ -77,13 +77,13 @@
       "nome": "Deivide",
       "login": "deivide",
       "senha": "123",
-      "sobrenome": "Paulino da Cruz",
+      "sobrenome": "Paulino",
       "cpf": "45139475863",
       "telefone": "15988341654",
-      "cep": 18276010,
-      "endereco": "Rua 15 de novembro",
-      "numero": "1663",
-      "observacao": "teste3 ",
+      "cep": 18270001,
+      "endereco": "Rua 11 de agosto",
+      "numero": "6811",
+      "observacao": "em frente a allegro 1",
       "categoria_id": 3
     }
   ],

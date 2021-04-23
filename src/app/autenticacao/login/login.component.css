@@ -44,8 +44,9 @@ button {
 
 button:hover {
     background: yellow;
-    transition: 1s;
+    transition: .3s;
     font-size: 14px;
+    color: black;
 }
 
 button:active {

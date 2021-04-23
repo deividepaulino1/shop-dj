@@ -17,6 +17,7 @@ img {
 }
 
 .menu:hover .menu__link:hover {
+    transition: 0.3s;
     opacity: 0.8;
     margin-top: 3px;
     color: rgb(119, 70, 15);

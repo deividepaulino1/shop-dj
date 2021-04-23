@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SharedServiceService } from 'src/assets/services/carrinho/shared-service.service';
 
 @Component({
@@ -8,9 +9,9 @@ import { SharedServiceService } from 'src/assets/services/carrinho/shared-servic
 })
 export class RevisaoComponent implements OnInit {
 
-  public sampleData: any = [] ;
+  public sampleData: any = [];
   total: number | undefined;
-  constructor(private sharedSerivce: SharedServiceService) { }
+  constructor(private sharedSerivce: SharedServiceService, private router: Router) { }
 
   // tslint:disable-next-line:typedef
   ngOnInit() {
@@ -32,18 +33,26 @@ export class RevisaoComponent implements OnInit {
     this.sharedSerivce.clearData();
   }
 
-  calcularTotal(data){    
-   data.status = 'Adicionado'; 
-    }
+  calcularTotal(data) {
+    data.status = 'Adicionado';
+  }
 
   getTotal(data) {
-      let total = 0;
-      this.sampleData.forEach((sampleData) => {
-        total += sampleData.price;
-      });
-      console.log(total);
-      console.log(this.sampleData);
-      return total;
+    let total = 0;
+    this.sampleData.forEach((sampleData) => {
+      total += sampleData.price;
+    });
+    console.log(total);
+    console.log(this.sampleData);
+    return total;
+  }
+
+  fazerCheckout() {
+    if (this.sampleData.length >= 1) {
+      this.router.navigate(['/dadosEntrega']);
+    } else {
+      alert('Carrinho vazio ou nenhum usuário conectado');
     }
+  }
 
 }

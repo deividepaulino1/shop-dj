@@ -32,6 +32,7 @@ export class AuthService {
 
       this.mostrarMenuEmitter.emit(true);
       this.ocultarLoginEmitter.emit(false);
+      alert('Usuário ou senha inválidos. \n \n Tente o seguinte: \n login: "deivide" \n Senha: "123"');
     }
 
   }

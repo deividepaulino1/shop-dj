@@ -1,0 +1,55 @@
+<router-outlet></router-outlet>
+<div class="container">
+    <div class="cupom">
+        <p>Cupom de desconto</p>
+        <input class="desconto" [(ngModel)]="cupom.desconto" type="text" id="cupom" placeholder="Insira o cupom">
+        <button (click)="newPrice()" type="submit">Aplicar</button>
+        <div class="valor">
+            <h5 class="taxa__entrega">Taxa de entrega: {{custoFrete | currency: 'R$ '}}</h5>
+            <p class="total">Total: {{novoPreco | currency: 'R$ '}}</p>
+
+        </div>
+    </div>
+    <form id="pagamento">
+        <div class="forma__pagamento">
+            <input type="radio" id="ocultarDinheiro" name="1" />
+            <div id="dinheiro">
+                <div>
+                    <p>Precisa de troco?</p>
+
+                    <input type="radio" name="foram" id="validarDinheiro" checked>
+                    <label>SIM</label>
+
+                    <input id="dinheiroInput" type="number" name="foram" placeholder="Troco para: R$ 00,00" required>
+
+                    <input type="radio" name="foram" id="2">
+                    <label>NÃO</label>
+                </div>
+                <Div id="label__pagamento">
+                    <label for="ocultarDinheiro">Pagar com Cartão</label>
+                </Div>
+            </div>
+            <div id="dinheiro__exibir">
+                <label for="ocultarDinheiro"></label>
+
+            </div>
+
+            <input type="radio" id="ocultarCartao" name="1" checked />
+            <div id="cartao">
+                <div>
+                    <input type="radio" name="foram" id="validarCartao" required>
+                    <label>Crédito</label>
+
+                    <input type="radio" name="foram" id="2">
+                    <label>Débito</label>
+                </div>
+                <label for="ocultarCartao"></label>
+            </div>
+            <div id="cartao__exibir">
+                <div id="label__pagamento"><label for="ocultarCartao">Pagar com Dinheiro</label>
+                </div>
+            </div>
+            <button (click)="fazerCheckout()" type="submit" id="pagamento"> Enviar Pedido</button>
+        </div>
+    </form>
+</div>

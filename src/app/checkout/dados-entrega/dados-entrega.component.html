@@ -1,0 +1,85 @@
+<router-outlet></router-outlet>
+<div>
+    <table>
+        <h2>Dados para entrega</h2>
+        <div class="container__dados">
+            <thead>
+                <tr>
+                    <th scope="col">Destinatário:</th>
+                    <div id="endereco__container">
+                        <th id="endereco" scope="col">CEP:</th>
+                        <th id="endereco" scope="col">Endereço:</th>
+                        <th id="endereco" scope="col">Numero:</th>
+                        <th id="endereco" scope="col">Observação:</th>
+                    </div>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr *ngFor="let usuario of usuarios">
+                    <td>{{usuario.nome}} {{usuario.sobrenome}}</td>
+                    <div id="endereco__container">
+                        <td id="endereco">{{usuario.cep}}</td>
+                        <td id="endereco">{{usuario.endereco}}</td>
+                        <td id="endereco">{{usuario.numero}}</td>
+                        <td id="endereco">{{usuario.observacao}}</td>
+                    </div>
+                    <label class="botao" for="ocultar" (click)="editUsuario(usuario)">
+                        Editar
+                    </label>
+                    <button class="checkout" (click)="fazerCheckout()" type="submit">Avançar</button>
+                </tr>
+            </tbody>
+        </div>
+    
+        <input type="checkbox" id="ocultar">
+    
+        <div id="mostra" class="container__edicao">
+            <div class="container__edicao__componentes">
+                <h5>Insira os novo dados de endereço</h5>
+                <form id="add-form" (ngSubmit)="f.form.valid && saveUsuario(f)" #f="ngForm" novalidate>
+                    <div id="form-group">
+                        <label for="cep">CEP</label>
+                        <input type="number" [(ngModel)]="usuario.cep" id="cep" name="cep" #cep="ngModel" required
+                            class="form-control" [ngClass]="{ 'is-invalid': f.submitted && cep.invalid }"
+                            placeholder="Digite o cep">
+                        <div *ngIf="f.submitted && cep.invalid" class="invalid-feedback">
+                        </div>
+                    </div>
+                    <div id="form-group">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" [(ngModel)]="usuario.endereco" id="endereco" name="endereco" #endereco="ngModel"
+                            required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && endereco.invalid }"
+                            placeholder="Digite o endereco">
+                        <div *ngIf="f.submitted && endereco.invalid" class="invalid-feedback">
+    
+    
+                        </div>
+                        <div id="form-group">
+                            <label for="numero">Numero</label>
+                            <input type="text" [(ngModel)]="usuario.numero" id="numero" name="numero" #numero="ngModel"
+                                required class="form-control" [ngClass]="{ 'is-invalid': f.submitted && numero.invalid }"
+                                placeholder="Digite o numero">
+                            <div *ngIf="f.submitted && numero.invalid" class="invalid-feedback">
+    
+                            </div>
+                        </div>
+                    </div>
+                    <div id="form-group">
+                        <label for="observacao">Observação</label>
+                        <input type="text" [(ngModel)]="usuario.observacao" id="observacao" name="observacao"
+                            #observacao="ngModel" required class="form-control"
+                            [ngClass]="{ 'is-invalid': f.submitted && observacao.invalid }"
+                            placeholder="Digite uma observacao">
+                        <div *ngIf="f.submitted && observacao.invalid" class="invalid-feedback">
+    
+                        </div>
+                    </div>
+                    <div class="botao__alteracao">
+                        <button type="submit" >Salvar</button>
+                        <label class="button" type="reset " (click)="cleanForm(f)  " for="ocultar">Cancelar</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </table>

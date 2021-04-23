@@ -10,24 +10,34 @@ import { ProdutosComponent } from './shared/card/produtos/produtos.component';
 import { FooterComponent } from './shared/card/footer/footer.component';
 import { NavComponent } from './shared/nav/nav.component';
 import { StatusPedidoComponent } from './checkout/status-pedido/status-pedido.component';
-import { FormaDePagamentoComponent } from './checkout/forma-de-pagamento/forma-de-pagamento.component';
+import { dadosEntregaComponent } from './checkout/dados-entrega/dados-entrega.component';
 import { RevisaoComponent } from './checkout/revisao/revisao.component';
+import { MeuPedidoComponent } from './checkout/meu-pedido/meu-pedido.component';
+import { MeusPedidosComponent } from './shared/card/minha-conta/meus-pedidos/meus-pedidos.component';
+import { MeusDadosComponent } from './shared/card/minha-conta/meus-dados/meus-dados.component';
 
 const routes: Routes = [
 
-  { path: 'nav', component: NavComponent  },
-  { path: 'inicio', component: CardComponent  },
-  { path: 'produtos', component: ProdutosComponent  },
-  { path: 'carrinho', component: CarrinhoComponent  },
-  { path: 'contato', component: ContatoComponent  },
-  { path: 'login', component:   LoginComponent},
-  { path: 'cadastro', component: CadastroComponent  },
-  { path: 'rodape', component: FooterComponent  },
-  { path: 'statusPedido', component: StatusPedidoComponent  },
-  { path: 'formaDePagamento', component: FormaDePagamentoComponent  },
-  { path: 'revisao', component: RevisaoComponent  },
-  { path: 'minha-conta', component: MinhaContaComponent  },
-  { path: '', component: CardComponent  }
+  { path: 'nav', component: NavComponent },
+  { path: 'inicio', component: CardComponent },
+  { path: 'produtos', component: ProdutosComponent },
+  { path: 'carrinho', component: CarrinhoComponent },
+  { path: 'contato', component: ContatoComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'cadastro', component: CadastroComponent },
+  { path: 'rodape', component: FooterComponent },
+  { path: 'statusPedido', component: StatusPedidoComponent },
+  { path: 'dadosEntrega', component: dadosEntregaComponent },
+  { path: 'revisao', component: RevisaoComponent },
+  { path: 'meuPedido', component: MeuPedidoComponent },
+  { path: '', component: CardComponent },
+  {
+    path: 'minha-conta', component: MinhaContaComponent,
+    children: [
+      { path: 'meus-dados', component: MeusDadosComponent},
+      { path: 'meus-pedidos', component: MeusPedidosComponent }
+    ],
+  },
 
 ];
 
