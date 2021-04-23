@@ -76,3 +76,29 @@ img {
     transition-duration: .4s;
 }
 
+
+/* celularzinho */
+
+@media (max-width:480px){
+
+ div { 
+     border: orangered 1px solid;
+     overflow: hidden;
+     background-color: #333;
+     position: relative;
+ }
+
+.menu__lista {
+    display: none;
+}
+
+.menu__link {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+}
+    
+    
+}

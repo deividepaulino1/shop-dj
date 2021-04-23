@@ -15,24 +15,25 @@ import { RevisaoComponent } from './checkout/revisao/revisao.component';
 import { MeuPedidoComponent } from './checkout/meu-pedido/meu-pedido.component';
 import { MeusPedidosComponent } from './shared/card/minha-conta/meus-pedidos/meus-pedidos.component';
 import { MeusDadosComponent } from './shared/card/minha-conta/meus-dados/meus-dados.component';
+import { AuthGuard } from 'src/assets/guard/auth.guard';
 
 const routes: Routes = [
 
   { path: 'nav', component: NavComponent },
   { path: 'inicio', component: CardComponent },
   { path: 'produtos', component: ProdutosComponent },
-  { path: 'carrinho', component: CarrinhoComponent },
-  { path: 'contato', component: ContatoComponent },
+  { path: 'carrinho', component: CarrinhoComponent, canActivate: [AuthGuard] },
+  { path: 'contato', component: ContatoComponent, },
   { path: 'login', component: LoginComponent },
   { path: 'cadastro', component: CadastroComponent },
   { path: 'rodape', component: FooterComponent },
-  { path: 'statusPedido', component: StatusPedidoComponent },
-  { path: 'dadosEntrega', component: dadosEntregaComponent },
+  { path: 'statusPedido', component: StatusPedidoComponent,  canActivate: [AuthGuard]},
+  { path: 'dadosEntrega', component: dadosEntregaComponent,  canActivate: [AuthGuard] },
   { path: 'revisao', component: RevisaoComponent },
-  { path: 'meuPedido', component: MeuPedidoComponent },
+  { path: 'meuPedido', component: MeuPedidoComponent, canActivate: [AuthGuard] },
   { path: '', component: CardComponent },
   {
-    path: 'minha-conta', component: MinhaContaComponent,
+    path: 'minha-conta', component: MinhaContaComponent, canActivate: [AuthGuard],
     children: [
       { path: 'meus-dados', component: MeusDadosComponent},
       { path: 'meus-pedidos', component: MeusPedidosComponent }

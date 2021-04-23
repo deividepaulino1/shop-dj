@@ -25,7 +25,7 @@ export class AuthService {
       this.mostrarMenuEmitter.emit(false);
       this.ocultarLoginEmitter.emit(true);
       
-      this.router.navigate(['/produtos']);
+      this.router.navigate(['/revisao']);
 
     } else {
       this.usuarioAutenticado = false;
@@ -35,6 +35,10 @@ export class AuthService {
       alert('Usuário ou senha inválidos. \n \n Tente o seguinte: \n login: "deivide" \n Senha: "123"');
     }
 
+  }
+
+  usuarioEstaAutenticado(){
+    return this.usuarioAutenticado;
   }
 
 }
